@@ -7,14 +7,16 @@
 
     <!-- from https://gist.github.com/domenic/1f286d415559b56d725bee51a62c24a7?permalink_comment_id=3945701#gistcomment-3945701 -->
     <script>
-        const destination = window.location.href;
-        if (window.location.href.includes("oceanisendless.github.io/scratch-spec")) {
-            const redirectLocation = window.location.href.replace(
-                "oceanisendless.github.io/scratch-spec",
-                "scratchspec.github.io"
-            );
-            document.getElementById("body").innerHTML = "scratch-spec has moved into an organization repository!<br/><br/>Redirecting to " + redirectLocation + " ...";
-            window.location.href = redirectLocation;
+        window.onload = function () {
+            const destination = window.location.href;
+            if (window.location.href.includes("oceanisendless.github.io/scratch-spec")) {
+                const redirectLocation = window.location.href.replace(
+                    "oceanisendless.github.io/scratch-spec",
+                    "scratchspec.github.io"
+                );
+                document.getElementById("body").innerHTML = "scratch-spec has moved into an organization repository!<br/><br/>Redirecting to " + redirectLocation + " ...";
+                window.location.href = redirectLocation;
+            }
         }
     </script>
 </head>
